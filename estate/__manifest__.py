@@ -15,4 +15,7 @@
         'phone_validation',
     ],
     'application': True,
+    'data': [
+        'data/ir.model.access.csv'
+    ]
 }

@@ -28,7 +28,7 @@ class EstateProperty(models.Model):
         ('sold', 'Sold'), ('canceled', 'Canceled')],
         required = True, 
         copy = False, 
-        default = ('new', 'New')
+        default = 'new'
     )
     
     # reserved fields

@@ -1,5 +1,3 @@
-from email.policy import default
-import string
 from odoo import models, fields
 
 

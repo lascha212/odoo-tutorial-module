@@ -1,5 +1,23 @@
 <?xml version="1.0"?>
 <odoo>
+    <!-- Chapter 7 -->
+    <record id="estate_property_tree_view" model="ir.ui.view">
+        <field name="name">estate.property.tree.view</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <tree string="Channel">
+                <field name="name"/>
+                <field name="postcode"/>
+                <field name="bedrooms"/>
+                <field name="Living Area (sqm)"/>
+                <field name="Expected Price"/>
+                <field name="Selling Price"/>
+                <field name="Available From"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Chapter 6 -->
     <record id="estate_property_action" model="ir.actions.act_window">
         <field name="name">Properties</field>
         <field name="res_model">estate.property</field>

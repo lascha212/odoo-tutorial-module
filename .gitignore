@@ -1,0 +1,3 @@
+# python autocreate files to ignore
+estate/__pycache__/
+estate/models/__pycache__/

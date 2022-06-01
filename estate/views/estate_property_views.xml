@@ -24,6 +24,7 @@
         <field name="arch" type="xml">
             <form string="Property">
                 <sheet>
+                    <h1><field name="name"/></h1>
                     <group class="top-section">
                         <group class="left" name="left">
                             <field name="postcode"/>

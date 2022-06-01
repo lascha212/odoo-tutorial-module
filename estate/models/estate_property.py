@@ -1,3 +1,5 @@
+from email.policy import default
+import string
 from odoo import models, fields
 
 
@@ -8,7 +10,7 @@ class EstateProperty(models.Model):
     name = fields.Char('Name', required=True)
     description = fields.Text('Description')
     postcode = fields.Char('Postcode')
-    date_availability = fields.Date('Date Availability', copy=False, default=lambda self: fields.Date.sum(fields.Date.today(), months=+1))
+    date_availability = fields.Date('Date Availability', copy=False, default=lambda self: fields.Date.sum(fields.Date.today(), months=+3))
     expected_price = fields.Float('Expected Price', required=True)
     selling_price = fields.Float('Selling Price', readonly=True, copy=False)
     bedrooms = fields.Integer('Number Bedrooms', default=2)
@@ -20,3 +22,15 @@ class EstateProperty(models.Model):
     garden_orientation = fields.Selection(
         string='Garden Orientation',  # string is the label of the field seen by the user
         selection=[('north', 'North'), ('east', 'East'), ('south', 'South'), ('west', 'West')])
+    state = fields.Selection(
+        string = 'State', 
+        selection = [('new', 'New'), ('offer_received', 'Offer Received'), ('offer_accepted', 'Offer Accepted'),
+        ('sold', 'Sold'), ('canceled', 'Canceled')],
+        required = True, 
+        copy = False, 
+        default = ('new', 'New')
+    )
+    
+    # reserved fields
+    active = fields.Boolean('Active', default=True)
+

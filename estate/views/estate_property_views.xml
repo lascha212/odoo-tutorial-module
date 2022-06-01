@@ -25,14 +25,14 @@
             <form string="Property">
                 <sheet>
                     <group class="top-section">
-                        <div class="left" name="left">
+                        <group class="left" name="left">
                             <field name="postcode"/>
                             <field name="date_availability"/>
-                        </div>
-                        <div class="right" name="right">
+                        </group>
+                        <group class="right" name="right">
                             <field name="expected_price"/>
                             <field name="selling_price"/>
-                        </div>
+                        </group>
                     </group>
                     <!-- notebook defines a tabbed section, pages are the tabs -->
                     <notebook>

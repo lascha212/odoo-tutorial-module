@@ -16,6 +16,6 @@
     ],
     'application': True,
     'data': [
-        'data/ir.model.access.csv'
+        'security/ir.model.access.csv'
     ]
 }

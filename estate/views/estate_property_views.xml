@@ -37,7 +37,9 @@
                     <!-- notebook defines a tabbed section, pages are the tabs -->
                     <notebook>
                         <page string="Description">
-                            <field name="description"/>
+                            <group>
+                                <field name="description"/>
+                            </group>
                             <field name="bedrooms"/>
                             <field name="living_area"/>
                             <field name="facades"/>

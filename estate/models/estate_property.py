@@ -32,7 +32,7 @@ class EstateProperty(models.Model):
     
     # computed fields
     total_area = fields.Float(compute = "_compute_total_area")
-    best_price = fields.Float(computer = "_compute_best_price")
+    best_price = fields.Float(compute = "_compute_best_price")
     
     # reserved fields
     active = fields.Boolean('Active', default=True)

@@ -10,4 +10,4 @@ class EstatePropertyOffer(models.Model):
         string = 'Status',  # string is the label of the field seen by the user
         selection = [('accepted', 'Accepted'), ('refused', 'Refused')])
     partner_id = fields.Many2one("res.partner", string = 'Partner', required = True)
-    property_id = fields.Many2one('estate.property', string = 'Property', required = True)
+    property_id = fields.Many2one('estate.property', string = 'Property', required = True, invisible=True)

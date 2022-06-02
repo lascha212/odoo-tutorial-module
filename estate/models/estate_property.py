@@ -8,7 +8,7 @@ class EstateProperty(models.Model):
     name = fields.Char('Name', required=True)
     description = fields.Text('Description')
     postcode = fields.Char('Postcode')
-    date_availability = fields.Date('Date Availability', copy=False, default=lambda self:fields.Date.add(fields.Date.today(), months=3))
+    date_availability = fields.Date('Date Availability', copy=False, default=lambda self: fields.Date.add(fields.Date.today(), months=3))
     expected_price = fields.Float('Expected Price', required=True)
     selling_price = fields.Float('Selling Price', readonly=True, copy=False)
     bedrooms = fields.Integer('Number Bedrooms', default=2)
@@ -21,13 +21,14 @@ class EstateProperty(models.Model):
         string='Garden Orientation',  # string is the label of the field seen by the user
         selection=[('north', 'North'), ('east', 'East'), ('south', 'South'), ('west', 'West')])
     state = fields.Selection(
-        string = 'State',
+        string = 'State', 
         selection = [('new', 'New'), ('offer_received', 'Offer Received'), ('offer_accepted', 'Offer Accepted'),
         ('sold', 'Sold'), ('canceled', 'Canceled')],
-        required = True,
-        copy = False,
+        required = True, 
+        copy = False, 
         default = 'new'
     )
-
+    
     # reserved fields
     active = fields.Boolean('Active', default=True)
+

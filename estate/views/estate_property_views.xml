@@ -65,9 +65,17 @@
         <field name="model">estate.property</field>
         <field name="arch" type="xml">
             <search>
-                <field name="name" string="Title" />
-                <field name="postcode"/>
-                <filter string="Available" name="active" domain="[('active', '=', True)]"/>
+                <field name="name" string="Title"/>
+                <field name="postcode" string="Postcode"/>
+                <field name="expected_price" string="Expected Price"/>
+                <field name="bedrooms" string="Bedrooms"/>
+                <field name="living_area" string="Living Area (sqm)"/>
+                <field name="facades" string="Facades"/>
+                <separator/>
+                <filter string="Available" name="active" domain="[('name', '=', 'The first advertisement')]"/>
+                <group expand="1" string="Group By">
+                    <filter name="postcode" string="Postcode" context="{'group_by':'postcode'"/>
+                </group>
             </search>
         </field>
     </record>

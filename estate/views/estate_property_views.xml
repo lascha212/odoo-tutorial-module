@@ -55,6 +55,17 @@
         </field>
     </record>
 
+    <!-- Chapter 7: Search -->
+    <record>
+        <field name="name">estate.property.search</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter string="Available" name="active" domain="[('active', '=', True)]"/>
+            </search>
+        </field>
+    </record>
+
     <!-- Chapter 6 -->
     <record id="estate_property_action" model="ir.actions.act_window">
         <field name="name">Properties</field>

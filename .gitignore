@@ -1,7 +1,7 @@
 # python autocreate files to ignore
 estate/__pycache__/
-estate/models/__pycache__/
+estate/models/__pycache__/*
 
 # visual studio code files to ignore
 ## workspace settings
-.vscode/ 
+.vscode/

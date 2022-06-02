@@ -65,7 +65,8 @@
         <field name="model">estate.property</field>
         <field name="arch" type="xml">
             <search>
-                <filter string="Available" name="active"/>
+                <field name="name">{'search_default_name': [name]}</field>
+                <filter string="Available" name="active" domain="[('active', '=', True)]"/>
             </search>
         </field>
     </record>

@@ -22,7 +22,7 @@
         <field name="arch" type="xml">
             <form string="Property Types">
                 <sheet>
-                    <h1><field name="name"/></h1>
+                    <h1><field name="name" nolabel="1"/></h1>
                 </sheet>
             </form>
         </field>

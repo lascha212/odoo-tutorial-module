@@ -1,3 +1,5 @@
+from copy import copy
+import string
 from odoo import models, fields
 
 
@@ -32,6 +34,9 @@ class EstateProperty(models.Model):
     # reserved fields
     active = fields.Boolean('Active', default=True)
 
-    # many2one fields
+    # many2one fields (Chapter 8)
     property_type_id = fields.Many2one("estate.property.type", string="Property Type")
-
+    ## buyer (res.partner)
+    buyer = fields.Many2one("res.partner", string="Buyer", copy=False)
+    ## salesperson (res.user)
+    salesperson = fields.Many2one("res.users", string="Salesperson", default=lambda self: self.env.user)

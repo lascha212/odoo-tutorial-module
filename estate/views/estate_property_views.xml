@@ -30,7 +30,7 @@
             <form string="Property">
                 <sheet>
                     <h1><field name="name"/></h1>
-                    <field name="tags"/>
+                    <field name="tag_ids" widget="many2many_tags"/>
                     <group class="top-section">
                         <group class="left" name="left">
                             <field name="property_type_id"/>

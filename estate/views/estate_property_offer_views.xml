@@ -6,8 +6,8 @@
 <odoo>
     <!-- custom list (tree) view -->
     <record id="estate_property_offer_tree_view" model="ir.ui.view">
-        <field name="name">estate.property.tag.tree.view</field>
-        <field name="model">estate.property.tag</field>
+        <field name="name">estate.property.offer.tree.view</field>
+        <field name="model">estate.property.offer</field>
         <field name="arch" type="xml">
             <tree string="Channel">
                 <field name="price"/>
@@ -19,8 +19,8 @@
 
      <!-- custom form view -->
      <record id="estate_property_offer_form_view" model="ir.ui.view">
-        <field name="name">estate.property.tag.form</field>
-        <field name="model">estate.property.tag</field>
+        <field name="name">estate.property.offer.form</field>
+        <field name="model">estate.property.offer</field>
         <field name="arch" type="xml">
             <form string="Property Types">
                 <sheet>

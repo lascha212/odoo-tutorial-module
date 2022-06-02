@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <odoo>
     <menuitem id="test_menu_root" name="Real Estate">
-        <menuitem id="test_first_level_menu" name="Advertisements">
+        <menuitem id="ep_advertisements" name="Advertisements">
             <menuitem id="estate_property_root_menu" action="estate_property_action"/>
-            <menuitem id="estate_property_type_roote_menu" action="estate_property_type_action"/>
         </menuitem>
+        <menuitem id="ep_types" name="Property Types"/>
     </menuitem>
 </odoo>

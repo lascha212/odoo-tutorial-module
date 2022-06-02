@@ -1,5 +1,3 @@
-from copy import copy
-import string
 from odoo import models, fields
 
 

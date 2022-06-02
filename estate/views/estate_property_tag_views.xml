@@ -4,10 +4,10 @@
   schematypens="http://relaxng.org/ns/structure/1.0"
   type="application/xml"?>
 <odoo>
-    <!-- Chapter 7: custom list (tree) view -->
-    <record id="estate_property_type_tree_view" model="ir.ui.view">
-        <field name="name">estate.property.type.tree.view</field>
-        <field name="model">estate.property.type</field>
+    <!-- custom list (tree) view -->
+    <record id="estate_property_tag_tree_view" model="ir.ui.view">
+        <field name="name">estate.property.tag.tree.view</field>
+        <field name="model">estate.property.tag</field>
         <field name="arch" type="xml">
             <tree string="Channel">
                 <field name="name"/>
@@ -15,10 +15,10 @@
         </field>
     </record>
 
-     <!-- Chapter 7: custom form view -->
-     <record id="estate_property_type_form_view" model="ir.ui.view">
-        <field name="name">estate.property.type.form</field>
-        <field name="model">estate.property.type</field>
+     <!-- custom form view -->
+     <record id="estate_property_tag_form_view" model="ir.ui.view">
+        <field name="name">estate.property.tag.form</field>
+        <field name="model">estate.property.tag</field>
         <field name="arch" type="xml">
             <form string="Property Types">
                 <sheet>

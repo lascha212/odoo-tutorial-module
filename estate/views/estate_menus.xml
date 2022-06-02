@@ -4,10 +4,16 @@
 
     <menuitem id="menu_ep_advertisements" name="Advertisements" parent="menu_ep_root" sequence="1">
         <menuitem id="estate_property_root_menu" action="estate_property_action"/>
+    </menuitem>
+
+    <!-- Settings -->
+    <menuitem id="menu_ep_settings" name="Settings" parent="menu_ep_root" sequence="2"/>
+
+    <menuitem id="menu_ep_property_types" name="Property Types" parent="menu_ep_settings" sequence="1">
         <menuitem id="estate_property_type_root_menu" action="estate_property_type_action"/>
     </menuitem>
 
-    <menuitem id="menu_ep_property_types" name="Property Types" parent="menu_ep_root" sequence="2">
-        <menuitem id="estate_property_type_root_menu" action="estate_property_type_action"/>
+    <menuitem id="menu_ep_property_tags" name="Property Tags" parent="menu_ep_settings" sequence="2">
+        <menuitem id="estate_property_tags_root_menu" action="estate_property_tags_action"/>
     </menuitem>
 </odoo>

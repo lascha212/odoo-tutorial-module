@@ -89,16 +89,24 @@
         </field>
     </record>
 
-    <!-- Chapter 6 -->
+    <!-- Chapter 6: Actions -->
     <record id="estate_property_action" model="ir.actions.act_window">
         <field name="name">Properties</field>
         <field name="res_model">estate.property</field>
         <field name="view_mode">tree,form</field>
     </record>
 
+    <!-- action for the type -->
     <record id="estate_property_type_action" model="ir.actions.act_window">
         <field name="name">Property Types</field>
         <field name="res_model">estate.property.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- action for the tags -->
+    <record id="estate_property_tags_action" model="ir.actions.act_window">
+        <field name="name">Property Tags</field>
+        <field name="res_model">estate.property.tag</field>
         <field name="view_mode">tree,form</field>
     </record>
 </odoo>

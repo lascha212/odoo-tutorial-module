@@ -1,6 +1,3 @@
-import string
-
-from sqlalchemy import null
 from odoo import models, fields, api
 
 
@@ -75,5 +72,5 @@ class EstateProperty(models.Model):
             self.garden_area = 10
             self.garden_orientation = "North"
         else:
-            self.garden_area = null
+            self.garden_area = 0
             self.garden_orientation = ""

@@ -83,14 +83,14 @@ class EstateProperty(models.Model):
     # Chapter 10: methods for buttons
     def action_set_property_sold(self):
         for record in self:
-            if record.state != "Canceled":
-                record.state = "Sold"
+            if record.state != "canceled":
+                record.state = "sold"
             else:
                 exceptions.UserError("Sold properties cannot be canceled.")
     
     def action_set_property_canceled(self):
         for record in self:
-            if record.state != "Sold":
-                record.state = "Canceled"
+            if record.state != "sold":
+                record.state = "canceled"
             else:
                 exceptions.UserError("Canceled properties cannot be sold.")

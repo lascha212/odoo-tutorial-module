@@ -63,4 +63,5 @@ class EstateProperty(models.Model):
             for offer in record.offer_ids:
                 if max < offer.price:
                     max = offer.price
+        # this could be optimised
         record.best_offer = max

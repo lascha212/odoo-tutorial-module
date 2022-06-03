@@ -35,7 +35,7 @@
                         type="object"/>
                     <button 
                         name="action_set_property_canceled" 
-                        string="Canceled"
+                        string="Cancel"
                         type="object"/>
                 </header>
                 <sheet>
@@ -69,11 +69,13 @@
                                 <field name="total_area" label="Total Area (sqm)"/>
                             </group>
                         </page>
+                        <!-- OFFERS TAB -->
                         <page string="Offers">
                             <group>
                                 <field name="offer_ids"/>
                             </group>
                         </page>
+                        <!-- OTHER INFO TAB -->
                         <page string="Other Info">
                             <group>
                                 <field name="salesperson"/>

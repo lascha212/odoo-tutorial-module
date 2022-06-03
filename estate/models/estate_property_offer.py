@@ -26,3 +26,11 @@ class EstatePropertyOffer(models.Model):
         for record in self:
             delta = record.date_deadline - fields.Date.today()
             record.validity = delta.days
+    
+    # Chapter 10: functions for buttons
+    def action_confirm(self):
+        self.status = "accepted"
+        self.property_id.selling_price = self.price
+
+    def action_refuse(self):
+        self.status = "refused"

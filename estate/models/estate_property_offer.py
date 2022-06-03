@@ -13,8 +13,8 @@ class EstatePropertyOffer(models.Model):
     property_id = fields.Many2one('estate.property', string = 'Property', required = True, invisible=True)
 
     # Chapter 9: compute and inverse
-    validity = fields.Integer("Validity Duration", default = 7)
-    date_deadline = fields.Date("Validity Deadline", compute = "_compute_date_deadline", inverse = "_inverse_date_deadline")
+    validity = fields.Integer("Validity (days)", default = 7)
+    date_deadline = fields.Date("Deadline", compute = "_compute_date_deadline", inverse = "_inverse_date_deadline")
 
     # Functions to compute field values
     @api.depends("validity")

@@ -1,4 +1,6 @@
 import string
+
+from sqlalchemy import null
 from odoo import models, fields, api
 
 
@@ -65,3 +67,13 @@ class EstateProperty(models.Model):
                     max = offer.price
         # this could be optimised
         record.best_offer = max
+
+    # Chapter 9: onchange computing functions
+    @api.onchange("garden")
+    def _onchange_garden(self):
+        if self.garden:
+            self.garden_area = 10
+            self.garden_orientation = "North"
+        else:
+            self.garden_area = null
+            self.garden_orientation = ""

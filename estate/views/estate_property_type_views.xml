@@ -9,7 +9,7 @@
         <field name="name">estate.property.type.tree.view</field>
         <field name="model">estate.property.type</field>
         <field name="arch" type="xml">
-            <tree string="Channel">
+            <tree>
                 <field name="name"/>
             </tree>
         </field>
@@ -20,7 +20,7 @@
         <field name="name">estate.property.type.form</field>
         <field name="model">estate.property.type</field>
         <field name="arch" type="xml">
-            <form string="Property Types">
+            <form>
                 <sheet>
                     <h1><field name="name" nolabel="1"/></h1>
                 </sheet>

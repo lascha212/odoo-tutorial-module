@@ -1,4 +1,5 @@
-from odoo import models, fields, api
+import odoo
+from odoo import api, fields, models
 
 
 class EstatePropertyOffer(models.Model):

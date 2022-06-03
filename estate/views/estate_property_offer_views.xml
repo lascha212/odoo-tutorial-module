@@ -9,7 +9,7 @@
         <field name="name">estate.property.offer.tree.view</field>
         <field name="model">estate.property.offer</field>
         <field name="arch" type="xml">
-            <tree string="Offers">
+            <tree>
                 <field name="price"/>
                 <field name="partner_id"/>
                 <field name="validity"/>
@@ -26,7 +26,7 @@
         <field name="name">estate.property.offer.form</field>
         <field name="model">estate.property.offer</field>
         <field name="arch" type="xml">
-            <form string="Create Offers">
+            <form>
                 <sheet>
                     <group>
                         <field name="price"/>

@@ -1,4 +1,5 @@
-from odoo import models, fields
+import odoo
+from odoo import fields, models
 
 
 class EstatePropertyTag(models.Model):

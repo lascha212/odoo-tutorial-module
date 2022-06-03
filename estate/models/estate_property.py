@@ -66,7 +66,7 @@ class EstateProperty(models.Model):
         #             max = offer.price
         # record.best_offer = max
         for record in self:
-            offers = map(lambda offer: record.price, record.offer_ids)
+            offers = map(lambda offer: offer.price, record.offer_ids)
             record.best_offer = max(offers)
         
 

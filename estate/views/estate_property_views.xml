@@ -118,23 +118,16 @@
     </record>
 
     <!-- action for the type -->
-    <record id="estate_property_type_action" model="ir.actions.act_window">
+    <record id="estate_property_action_type" model="ir.actions.act_window">
         <field name="name">Property Types</field>
         <field name="res_model">estate.property.type</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <!-- action for the tags -->
-    <record id="estate_property_tags_action" model="ir.actions.act_window">
+    <record id="estate_property_action_tag" model="ir.actions.act_window">
         <field name="name">Property Tags</field>
         <field name="res_model">estate.property.tag</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-
-    <!-- action for the offers -->
-    <record id="estate_property_offers_action" model="ir.actions.act_window">
-        <field name="name">Property Offers</field>
-        <field name="res_model">estate.property.offer</field>
         <field name="view_mode">tree,form</field>
     </record>
 </odoo>

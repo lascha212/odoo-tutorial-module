@@ -1,5 +1,5 @@
 from odoo import models, fields, api, tools
-from odoo.exceptions import UserError, AccessError
+from odoo.exceptions import UserError
 
 
 class EstateProperty(models.Model):

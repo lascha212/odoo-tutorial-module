@@ -39,7 +39,7 @@
                         </group>
                         <group class="right" name="right">
                             <field name="expected_price"/>
-                            <field name="best_price" string="Best Offer"/>
+                            <field name="best_offer" string="Best Offer"/>
                             <field name="selling_price"/>
                         </group>
                     </group>

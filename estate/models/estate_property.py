@@ -1,4 +1,5 @@
-from odoo import models, fields, api
+from odoo import models, fields, api, tools
+from odoo.exceptions import UserError, AccessError
 
 
 class EstateProperty(models.Model):
@@ -57,13 +58,17 @@ class EstateProperty(models.Model):
 
     @api.depends("offer_ids")
     def _compute_best_price(self):
-        for record in self:
-            max = -1
-            for offer in record.offer_ids:
-                if max < offer.price:
-                    max = offer.price
         # this could be optimised
-        record.best_offer = max
+        # for record in self:
+        #     max = -1
+        #     for offer in record.offer_ids:
+        #         if max < offer.price:
+        #             max = offer.price
+        # record.best_offer = max
+        for record in self:
+            offers = map(lambda offer: record.price, record.offer_ids)
+            record.best_offer = max(offers)
+        
 
     # Chapter 9: onchange computing functions
     @api.onchange("garden")
@@ -74,3 +79,18 @@ class EstateProperty(models.Model):
         else:
             self.garden_area = 0
             self.garden_orientation = ""
+    
+    # Chapter 10: methods for buttons
+    def action_set_property_sold(self):
+        for record in self:
+            if record.state != "Canceled":
+                record.state = "Sold"
+            else:
+                exceptions.UserError("Sold properties cannot be canceled.")
+    
+    def action_set_property_canceled(self):
+        for record in self:
+            if record.state != "Sold":
+                record.state = "Canceled"
+            else:
+                exceptions.UserError("Canceled properties cannot be sold.")
